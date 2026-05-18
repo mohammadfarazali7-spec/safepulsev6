@@ -1,0 +1,88 @@
+{
+  "expo": {
+    "name": "SafePulse",
+    "slug": "safepulse-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "safepulse",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.safepulse.app",
+      "infoPlist": {
+        "NSLocationWhenInUseUsageDescription": "SafePulse needs your location to show live safety incidents and send emergency alerts.",
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "SafePulse uses your location to keep your trusted contacts updated during an emergency.",
+        "NSLocationAlwaysUsageDescription": "SafePulse needs continuous location access to track your safety in the background."
+      }
+    },
+    "android": {
+      "package": "com.safepulse.app",
+      "permissions": [
+        "INTERNET",
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION",
+        "WAKE_LOCK",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED"
+      ],
+      "googleServicesFile": "./google-services.json",
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyAxbp8i-pZ0Rx3spqANg5llCYE8_WNDJMA"
+        }
+      },
+      "intentFilters": [
+        {
+          "action": "VIEW",
+          "autoVerify": true,
+          "data": [
+            {
+              "scheme": "safepulse",
+              "host": "oauthredirect"
+            }
+          ],
+          "category": [
+            "BROWSABLE",
+            "DEFAULT"
+          ]
+        }
+      ]
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "usesCleartextTraffic": true,
+            "compileSdkVersion": 34,
+            "targetSdkVersion": 34,
+            "foregroundService": {
+              "notificationTitle": "SafePulse Shield Active",
+              "notificationBody": "Monitoring for emergencies in the background.",
+              "notificationColor": "#22c55e"
+            }
+          }
+        }
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysPermission": "Allow SafePulse to access your location always for emergency tracking.",
+          "locationWhenInUsePermission": "Allow SafePulse to access your location while using the app.",
+          "isAndroidBackgroundLocationEnabled": true
+        }
+      ],
+      "expo-web-browser"
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "d3eea62a-1ffd-4ea1-abbd-c39032f45099"
+      }
+    }
+  }
+}

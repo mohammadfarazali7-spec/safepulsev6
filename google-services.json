@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "85931283455",
+    "project_id": "safepulsedb-52c0d",
+    "storage_bucket": "safepulsedb-52c0d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:85931283455:android:b10697a9a718cea4f88dca",
+        "android_client_info": {
+          "package_name": "com.safepulse.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "85931283455-t3lhv0k2bkospio3mlsemq76c86fllu4.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.safepulse.app",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "85931283455-gbo1c0ehv5h2dft9gp909d8hr01vvjlo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZS8aiRw9Zn3sBIkbxuaufG2YajwCeNFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "85931283455-gbo1c0ehv5h2dft9gp909d8hr01vvjlo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
